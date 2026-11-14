@@ -13,7 +13,7 @@ Music apps for the **New Apostolic Church** – to the honour and glory of God.
 Open **https://infinitytimetable.github.io/NAC-Music-Hub/**, choose an app, then *Add to Home screen*. After the first opening it works without internet.
 
 ## Install on a Windows PC
-Download from the [Releases page](https://github.com/infinitytimetable/NAC-Music-Hub/releases/latest), unzip, and double-click **Install.bat**.
+Download from the [website](https://infinitytimetable.github.io/NAC-Music-Hub/#pc), unzip, and double-click **Install.bat**.
 Already installed? Double-click **Update NAC apps** on the desktop.
 
 ## Unlock codes
