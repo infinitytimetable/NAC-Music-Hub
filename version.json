@@ -1,0 +1,13 @@
+{
+ "version": "1.9.5",
+ "date": "2026-11-16",
+ "notes": [
+  "Install from the unlock screen \u2013 Music Hub, Programme Studio and Service Projector can now be installed on a phone straight from the unlock screen, before the code is entered."
+ ],
+ "downloads": {
+  "rehearsal": "https://infinitytimetable.github.io/NAC-Music-Hub/downloads/NAC_Choir_Rehearsal_PC.zip",
+  "hub": "https://infinitytimetable.github.io/NAC-Music-Hub/downloads/NAC_Music_Hub_PC.zip",
+  "studio": "https://infinitytimetable.github.io/NAC-Music-Hub/downloads/NAC_Programme_Studio_PC.zip",
+  "projector": "https://infinitytimetable.github.io/NAC-Music-Hub/downloads/NAC_Service_Projector_PC.zip"
+ }
+}

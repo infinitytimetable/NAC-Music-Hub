@@ -1,0 +1,31 @@
+{
+ "id": "NAC_Choir_Rehearsal.html",
+ "name": "NAC Choir Rehearsal",
+ "short_name": "Choir Rehearsal",
+ "start_url": "NAC_Choir_Rehearsal.html",
+ "scope": "./",
+ "display": "standalone",
+ "background_color": "#ffffff",
+ "theme_color": "#163a75",
+ "description": "Free for choir members and conductors. Practise every song with moving scores and your own part louder, see the hymn books, plan rehearsals.",
+ "icons": [
+  {
+   "src": "icons/rehearsal_192.png",
+   "sizes": "192x192",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "icons/rehearsal_256.png",
+   "sizes": "256x256",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "icons/rehearsal_512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "any"
+  }
+ ]
+}

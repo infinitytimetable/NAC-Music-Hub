@@ -1,0 +1,30 @@
+{
+ "id": "index.html",
+ "name": "NAC Music Apps",
+ "short_name": "NAC Apps",
+ "start_url": "index.html",
+ "scope": "./",
+ "display": "standalone",
+ "background_color": "#ffffff",
+ "theme_color": "#163a75",
+ "icons": [
+  {
+   "src": "icons/rehearsal_192.png",
+   "sizes": "192x192",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "icons/rehearsal_256.png",
+   "sizes": "256x256",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "icons/rehearsal_512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "any"
+  }
+ ]
+}

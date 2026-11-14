@@ -1,0 +1,31 @@
+{
+ "id": "NAC_Service_Projector.html",
+ "name": "NAC Service Projector",
+ "short_name": "Service Projector",
+ "start_url": "NAC_Service_Projector.html",
+ "scope": "./",
+ "display": "standalone",
+ "background_color": "#ffffff",
+ "theme_color": "#163a75",
+ "description": "Hymn words, slides and videos on the projector for services and concerts.",
+ "icons": [
+  {
+   "src": "icons/projector_192.png",
+   "sizes": "192x192",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "icons/projector_256.png",
+   "sizes": "256x256",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "icons/projector_512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "any"
+  }
+ ]
+}

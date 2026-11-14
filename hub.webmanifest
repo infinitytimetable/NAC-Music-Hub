@@ -1,0 +1,31 @@
+{
+ "id": "NAC_Music_Hub.html",
+ "name": "NAC Music Hub",
+ "short_name": "Music Hub",
+ "start_url": "NAC_Music_Hub.html",
+ "scope": "./",
+ "display": "standalone",
+ "background_color": "#ffffff",
+ "theme_color": "#163a75",
+ "description": "Everything in one: programmes, booklets, score books, choir, concerts, projection, workshops, congregation and newsletters.",
+ "icons": [
+  {
+   "src": "icons/hub_192.png",
+   "sizes": "192x192",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "icons/hub_256.png",
+   "sizes": "256x256",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "icons/hub_512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "any"
+  }
+ ]
+}

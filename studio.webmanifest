@@ -1,0 +1,31 @@
+{
+ "id": "NAC_Programme_Studio.html",
+ "name": "NAC Programme Studio",
+ "short_name": "Programme Studio",
+ "start_url": "NAC_Programme_Studio.html",
+ "scope": "./",
+ "display": "standalone",
+ "background_color": "#ffffff",
+ "theme_color": "#163a75",
+ "description": "Service and concert programmes, hymn library, score and lyric booklets, flyers, tickets and slides.",
+ "icons": [
+  {
+   "src": "icons/studio_192.png",
+   "sizes": "192x192",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "icons/studio_256.png",
+   "sizes": "256x256",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "icons/studio_512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "any"
+  }
+ ]
+}
