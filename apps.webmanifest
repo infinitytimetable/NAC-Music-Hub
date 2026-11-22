@@ -3,7 +3,7 @@
  "name": "NAC Music Apps",
  "short_name": "NAC Apps",
  "start_url": "index.html",
- "scope": "./",
+ "scope": "index.html",
  "display": "standalone",
  "background_color": "#ffffff",
  "theme_color": "#163a75",

@@ -1,5 +1,5 @@
 // keeps the apps on the device so they open without internet; a new version replaces the old copy
-const V = 'nac-1.9.5-2', A = 'nac-assets';
+const V = 'nac-1.9.5-3', A = 'nac-assets';
 // assets are named <part>.<hash>.<ext>; when a new copy of a part is saved, older copies of it are removed
 const stem = p => p.replace(/\.[0-9a-f]{6,}(\.[a-z0-9]+)$/i, '$1');
 self.addEventListener('install', e => self.skipWaiting());

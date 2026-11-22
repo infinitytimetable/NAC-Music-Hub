@@ -3,7 +3,7 @@
  "name": "NAC Service Projector",
  "short_name": "Service Projector",
  "start_url": "NAC_Service_Projector.html",
- "scope": "./",
+ "scope": "NAC_Service_Projector.html",
  "display": "standalone",
  "background_color": "#ffffff",
  "theme_color": "#163a75",

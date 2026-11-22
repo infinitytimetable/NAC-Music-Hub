@@ -3,7 +3,7 @@
  "name": "NAC Programme Studio",
  "short_name": "Programme Studio",
  "start_url": "NAC_Programme_Studio.html",
- "scope": "./",
+ "scope": "NAC_Programme_Studio.html",
  "display": "standalone",
  "background_color": "#ffffff",
  "theme_color": "#163a75",

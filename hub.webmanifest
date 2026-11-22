@@ -3,7 +3,7 @@
  "name": "NAC Music Hub",
  "short_name": "Music Hub",
  "start_url": "NAC_Music_Hub.html",
- "scope": "./",
+ "scope": "NAC_Music_Hub.html",
  "display": "standalone",
  "background_color": "#ffffff",
  "theme_color": "#163a75",

@@ -3,7 +3,7 @@
  "name": "NAC Choir Rehearsal",
  "short_name": "Choir Rehearsal",
  "start_url": "NAC_Choir_Rehearsal.html",
- "scope": "./",
+ "scope": "NAC_Choir_Rehearsal.html",
  "display": "standalone",
  "background_color": "#ffffff",
  "theme_color": "#163a75",
