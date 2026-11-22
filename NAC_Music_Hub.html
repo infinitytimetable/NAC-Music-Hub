@@ -990,7 +990,7 @@ function drawLibView(h, box, langs, l) {
     put(hymnRef(h) + '  ' + h.title, fb, 15, 20); if (cred) put(cred, fi, 9, 16); y -= 6; vs.forEach((v, i) => { v.split('\n').forEach((ln, j) => put((j === 0 && vs.length > 1 ? (i + 1) + '. ' : '   ') + ln, f, 11.5, 15)); y -= 8; }); if (l && l.chorus) { put('Chorus:', fi, 10, 14); l.chorus.split('\n').forEach(ln => put(ln, fi, 11.5, 15)); }
     downloadBlob(new Blob([await d.save()], { type: 'application/pdf' }), safeName(`${hymnRef(h)} ${h.title} - words`) + '.pdf'); };
   const pr = $('#hv-prac'); if (pr) pr.onclick = () => { PR.hid = h.id; showView('practice'); };
-  $('#hv-audio').onclick = () => { CH.hymn = h.id; CH.tab = 'practice'; showView('choir'); };
+  $('#hv-audio').onclick = () => { if (edHas('choir')) { CH.hymn = h.id; CH.tab = 'practice'; showView('choir'); } else if (edHas('practice') && typeof practiceHas === 'function' && practiceHas(h)) { PR.hid = h.id; PR.song = null; showView('practice'); } else toast('No practice audio for this hymn in this app'); };
 }
 function drawLibEditor() {
   const box = $('#lib-editor'); const h = hymnById(LIB.sel);
@@ -4679,7 +4679,8 @@ function gSearch(q) {
   allLessons().filter(l => has(l.title, l.topic)).slice(0, 4).forEach(l => out.push(['Lessons', l.title, () => { WS.tab = 'lessons'; WS.lesson = l.id; showView('workshops'); }]));
   (S.apparel || []).filter(d => has(d.name)).slice(0, 3).forEach(d => out.push(['T-shirts & caps', d.name, () => { AP.sel = d.id; showView('apparel'); }]));
   HELP.filter(h => has(h.title, ...h.steps.map(s => s.replace(/<[^>]+>/g, '')))).slice(0, 3).forEach(h => out.push(['Help', h.title, () => { showView('help'); setTimeout(() => $('#help-' + h.id).scrollIntoView({ block: 'start' }), 60); }]));
-  return out;
+  const GS_VIEW = { Hymns: 'library', Help: 'help', Programmes: 'programs', Concerts: 'concerts', Flyers: 'flyers', 'Choir members': 'choir', Rehearsals: 'choir', 'Lyric booklets': 'lyricbooks', 'Ticket events': 'tickets', Workshops: 'workshops', Lessons: 'workshops', 'T-shirts & caps': 'apparel' };
+  return out.filter(([c]) => edHas(GS_VIEW[c] || 'home'));
 }
 function bindGSearch() {
   const inp = $('#gsearch'); if (!inp) return; let dd = null, res = [], hi = 0;
@@ -7215,7 +7216,7 @@ function applyEdition() {
   const css = document.createElement('style');
   css.textContent = {
     studio: `.ed-studio [data-out=present],.ed-studio [data-o=present],.ed-studio #he-audio{display:none!important}`,
-    projector: `.ed-projector #he-sfile,.ed-projector #he-sfrom,.ed-projector #he-sto,.ed-projector #he-score,.ed-projector #he-audio,.ed-projector #he-organ,.ed-projector #lib-coll{display:none!important}.ed-projector label:has(#he-sfile),.ed-projector label:has(#he-sfrom),.ed-projector label:has(#he-sto),.ed-projector label.btn:has(#he-sheet){display:none!important}`,
+    projector: `.ed-projector #he-sfile,.ed-projector #he-sfrom,.ed-projector #he-sto,.ed-projector #he-score,.ed-projector #he-audio,.ed-projector #hv-audio,.ed-projector #he-organ,.ed-projector #lib-coll{display:none!important}.ed-projector label:has(#he-sfile),.ed-projector label:has(#he-sfrom),.ed-projector label:has(#he-sto),.ed-projector label.btn:has(#he-sheet){display:none!important}`,
   }[EDITION.id] || '';
   document.head.appendChild(css);
 }
@@ -9033,7 +9034,7 @@ function upDialog() {
   const g = document.getElementById('up-go'); if (g) g.onclick = upNow;
 }
 async function upNow() {
-  try { const reg = navigator.serviceWorker && await navigator.serviceWorker.getRegistration(); if (reg) { await reg.update(); const c = await caches.keys(); await Promise.all(c.map(k => caches.delete(k))); } } catch (e) { }
+  try { const reg = navigator.serviceWorker && await navigator.serviceWorker.getRegistration(); if (reg) { await reg.update(); const c = await caches.keys(); await Promise.all(c.filter(k => k !== 'nac-assets').map(k => caches.delete(k))); } } catch (e) { }
   location.reload();
 }
 function upAuto() {
