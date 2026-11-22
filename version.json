@@ -1,8 +1,11 @@
 {
- "version": "1.9.5",
- "date": "2026-11-16",
+ "version": "1.9.6",
+ "date": "2026-11-22",
  "notes": [
-  "Install from the unlock screen \u2013 Music Hub, Programme Studio and Service Projector can now be installed on a phone straight from the unlock screen, before the code is entered."
+  "Install every app on one phone \u2013 Each NAC app now installs as its own app. Before, once one app was installed, the others opened inside it and could not be installed.",
+  "Search fits each app \u2013 In Programme Studio, Service Projector and Choir Rehearsal, Search only shows things that app has.",
+  "Practice audio button \u2013 In Programme Studio the button on a hymn now opens Practice; in Service Projector it is no longer shown.",
+  "Updates keep the hymn books \u2013 Updating online no longer downloads the hymn books and scores again."
  ],
  "downloads": {
   "rehearsal": "https://infinitytimetable.github.io/NAC-Music-Hub/downloads/NAC_Choir_Rehearsal_PC.zip",
